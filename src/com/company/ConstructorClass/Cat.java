@@ -5,15 +5,15 @@ public class Cat{
     private String name;
     private String color;
 
-    public Cat() {
+    public Cat() {   //конструктор по умолчанию
     }
 
     public String getName(){
         return name;
     }
 
-    public void setName(String a){
-        name = a;
+    public void setName(String name){
+        this.name = name;
     }
 
     public String getColor(){
