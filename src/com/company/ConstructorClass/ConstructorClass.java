@@ -8,8 +8,7 @@ public class ConstructorClass {
         Dog dog = new Dog("Шарик","Пикинес",1);
         System.out.println("Кот по имени: " + cat.getName() + "\nЦвета: "+ cat.getColor()+"\n");
 
-        System.out.println("Пес по имени: " + dog.getName() + "\nПорода: "+ dog.getPoroda()+
-                "\nВозраст: "+dog.getAge());
+        System.out.println("Пес по имени: " + dog.getName() + "\nПорода: "+ dog.getPoroda()+ "\nВозраст: "+dog.getAge());
     }
 
 }

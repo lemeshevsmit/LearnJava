@@ -6,9 +6,12 @@ class Dog{
     private String poroda;
     private int age;
 
+    public Dog(String nameDog, String porodaDog){
+            name = nameDog;
+            poroda = porodaDog;
+    }
     public Dog(String nameDog, String porodaDog, int ageDog){
-        name = nameDog;
-        poroda = porodaDog;
+    this(nameDog,porodaDog);
         age = ageDog;
     }
 
