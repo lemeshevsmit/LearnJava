@@ -12,14 +12,13 @@ public class ConstructorClass {
         Dog dog = new Dog("Шарик","Пикинес",1);  // обьект с параметрами
         System.out.println("Пес по имени: " + dog.getName() + "\nПорода: "+ dog.getPoroda()+ "\nВозраст: "+dog.getAge());
         System.out.println("********************************************");
-
-        Animal an = new Animal("Name animal",4,"white","this is animal") {   // обьект абстрактного класса
+        Animal an = new Animal("Name animal",4,"white","this is animal") {   // создаем анонимный класс
             @Override
-            public void display() {   // переопределили метод для этого обьекта
+            public void display() {   // переопределили метод для этого класса
                 System.out.println("Animal class object display");
                 System.out.println("Animal name:");
                 System.out.println(getName());
-                super.setName("Жираф");     // поигрались с полями обьекта
+                super.setName("Жираф");     // поигрались с полями
                 System.out.println(getName());
                 System.out.println("Animal color:");
                 System.out.println(super.color);
@@ -32,7 +31,7 @@ public class ConstructorClass {
                 System.out.println(info = "this is big animal");
             }
         };
-        an.display();    // запускаем методы обьекта класс Animal
+        an.display();    // запускаем методы анонимного класса Animal
         System.out.println("Animal methods:");
         an.GetInfo();
         an.GetInfoProtect();
@@ -55,6 +54,7 @@ public class ConstructorClass {
         ping3.GetInfoPublic();
         ping3.GetInfo();
         ping3.GetInfoProtect();
+
     }
 
 }
