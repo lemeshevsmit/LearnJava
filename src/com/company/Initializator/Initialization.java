@@ -14,6 +14,8 @@ public class Initialization extends Person{
         tom.displayInfo();
 
         newPerson();
+        Student st1 = new Student("Max", 16,1);
+        st1.displayInfo();
     }
 
 }
@@ -49,11 +51,37 @@ class Person{
         info = "full information about person";
     }
     void displayInfo(){
-        System.out.printf("Name: %s \tAge: %d\n \tInfo: %s\n", name, age,info);
+        System.out.printf("\tName: %s \n\tAge: %d \n\tInfo: %s \n", name, age,info);
     }
 
     static void newPerson (){
         Person din = new Person("Din",25);
         din.displayInfo();
+    }
+}
+
+class Student extends Person
+{
+    private int cours;
+    static {
+        System.out.println("Блок инициализации static student");
+        Student st0 = new Student("Oleg", 17,1);
+        st0.displayInfo();
+    }
+
+    {
+        System.out.println("Блок инициализации student");
+        info="information about student";
+    }
+    Student(String name, int age, int cours){
+        super(name, age);
+        this.cours= cours;
+    }
+
+    @Override
+    void displayInfo() {
+        super.displayInfo();
+        System.out.printf("\tCourse: %d \n", cours);
+
     }
 }
