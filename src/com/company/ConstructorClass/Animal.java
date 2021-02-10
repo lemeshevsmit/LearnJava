@@ -6,7 +6,7 @@ public abstract class Animal {   //абстрактний класс  к пол�
     protected String color;
     String info;
 
-    Animal(String name, int age, String color, String info){  //конструктор для 4-ох полей
+    protected Animal(String name, int age, String color, String info){  //конструктор для 4-ох полей
         this.name = name;
         this.age = age;
         this.color=color;
