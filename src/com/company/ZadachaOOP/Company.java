@@ -29,10 +29,8 @@ public class Company {
 //        combine3.finctioncsaner();
         Office office1 = new Office(0);
         office1.addGadget(scaner2);
-        System.out.println(office1.getGadget());
-        //office1.addPersonToOffice(3);
-
-        //office1.displayWorkers();
-
+        office1.addPersonToOffice(3);
+        office1.
+        office1.displayWorkers();
     }
 }
