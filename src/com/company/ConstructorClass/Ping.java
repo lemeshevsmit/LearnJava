@@ -16,22 +16,6 @@ public class Ping extends Animal{
         this.name = name;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     Ping(String name, int age, String color, String info) {
         super(name, age, color, info);
     }
@@ -41,10 +25,12 @@ public class Ping extends Animal{
         this.color= color;
         this.age =  age;
     }
+
+
     @Override
     public void display() {
         System.out.println("Свинья по имени: " + name + "\nЦвета: "+ color+ "\nВозраста: "+ age);
-        //System.out.println(super.getName());
+        System.out.println("Свинья по имени: " + super.getName() + "\nЦвета: "+ super.color+ "\nВозраста: "+ super.age);
         System.out.println("ping method display ends\n");
     }
 }

@@ -23,27 +23,27 @@ public abstract class Animal {
     {
         System.out.println("This is protected animal method");
         info = "protected animal";
-        System.out.println(this.name + " info: "+info);
+        System.out.println(name + " info: "+info);
     }
 
     public void GetInfoPublic()
     {
         System.out.println("This is public animal method");
         info = " public animal";
-        System.out.println(this.name + " info: "+info);
+        System.out.println(name + " info: "+info);
     }
     private void GetInfoPrivate()
     {
         System.out.println("This is private animal method");
         info = " private animal";
-        System.out.println(this.getName() + " info: "+info);
+        System.out.println(name + " info: "+info);
     }
 
      void GetInfo()
     {
         System.out.println("This is default animal method");
         info = " default animal";
-        System.out.println(" info: "+info);
+        System.out.println(name+" info: "+info);
     }
 
     public String getName() {
