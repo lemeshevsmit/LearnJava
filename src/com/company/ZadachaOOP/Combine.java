@@ -1,8 +1,8 @@
 package com.company.ZadachaOOP;
 
-public class Combine implements Gadget{
-    private String name = "";
-    private int id =0;
+public class Combine implements Gadget,Printing,Scanning,Copyring{
+    private String name;
+    private int id;
 
     public Combine(int id, String name) {
         this.name = name;
@@ -10,31 +10,39 @@ public class Combine implements Gadget{
     }
     @Override
     public void start() {
-        System.out.println("Gadget: "+ name + " start working...");
+        System.out.println("Gadget: "+ this.name + " start working...");
     }
 
     @Override
     public void stop() {
-        System.out.println("Gadget: "+ name + " stop working.....");
+        System.out.println("Gadget: "+ this.name + " stop working.....");
     }
 
     @Override
-    public void finctionprint() {
+    public void print() {
         start();
         System.out.println("Идет лазерная печать.....");
         stop();
     }
 
     @Override
-    public void finctioncsaner() {
+    public void scan() {
         start();
         System.out.println("Идет сканирование....");
         stop();
     }
 
-    public void finctioncopy() {
+    public void copy() {
         start();
         System.out.println("Идет копирование...");
         stop();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
     }
 }

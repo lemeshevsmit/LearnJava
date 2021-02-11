@@ -1,10 +1,18 @@
 package com.company.ZadachaOOP;
 
-public interface Gadget  {
+interface Gadget {
 
      void start();
      void stop();
-     void finctionprint();
-     void finctioncsaner();
+}
 
+interface  Printing{
+     void  print();
+}
+
+interface  Scanning{
+     void  scan();
+}
+interface  Copyring{
+     void  copy();
 }
