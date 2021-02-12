@@ -6,15 +6,15 @@ public class Company {
     static private ArrayList<Office> offices = new ArrayList<Office>();
     static public void main(String[] args) {
         System.out.println("************************Gadget metods***************************");
-        Printer printer1 = new Printer(1,"HP");
-        Printer printer2 = new Printer(2,"Canon");
-        Printer printer3 = new Printer(3,"Epson");
-        Scaner scaner1 = new Scaner(1,"DvX");
-        Scaner scaner2 = new Scaner(2,"MyScan");
-        Scaner scaner3 = new Scaner(3,"GoodYear");
-        Combine combine1 = new Combine(1,"Combine");
-        Combine combine2 = new Combine(2,"HP machins");
-        Combine combine3 = new Combine(3,"Canon3v1");
+        Printer printer1 = new Printer(132265,"HP");
+        Printer printer2 = new Printer(537242,"Canon");
+        Printer printer3 = new Printer(379857635,"Epson");
+        Scaner scaner1 = new Scaner(547481,"DvX");
+        Scaner scaner2 = new Scaner(237869,"MyScan");
+        Scaner scaner3 = new Scaner(2345253,"GoodYear");
+        Combine combine1 = new Combine(796791,"Combine");
+        Combine combine2 = new Combine(9523342,"HP machins");
+        Combine combine3 = new Combine(6595933,"Canon3v1");
         printer1.print();
         printer3.print();
         scaner1.scan();
@@ -67,9 +67,27 @@ public class Company {
 
     public static void printOffice()
     {
+        Object o;
+        String type;
         for (int i = 0; i < offices.size(); i++) {
             System.out.printf("Кабинет №: " +offices.get(i).getNumberOffice() + "\n");
-            System.out.println("Устройство в кабинете: "+ (offices.get(i).getGadget().getClass().getSimpleName()));
+            o = offices.get(i).getGadget();
+            type = (offices.get(i).getGadget().getClass().getSimpleName());
+            System.out.println("Устройство в кабинете: ");
+            System.out.println( "Тип устройства:"+ offices.get(i).getGadget().getClass().getSimpleName());
+            if (type.equals("Scaner")) {
+                System.out.println("Фирма производитель:" + ((Scaner) o).getName());
+                System.out.println("Серийный номер :" + ((Scaner) o).getId());
+            }
+            if (type.equals("Printer")) {
+                System.out.println("Фирма производитель:" + ((Printer) o).getName());
+                System.out.println("Серийный номер :" + ((Printer) o).getId());
+            }
+            if (type.equals("Combine")) {
+                System.out.println("Фирма производитель:" + ((Combine) o).getName());
+                System.out.println("Серийный номер :" + ((Combine) o).getId());
+            }
+            System.out.println("");
         }
     }
 
@@ -77,11 +95,14 @@ public class Company {
         System.out.println("Роботники: ");
         OfficeWorker person;
         for (int i = 0; i < offices.size(); i++) {
+           if ((offices.get(i).getPerson())==(null)) {}
+               else
             for (int j = 0; j < offices.get(i).getPerson().length; j++) {
                 person= offices.get(i).getPerson()[j];
                 System.out.println(person.getFirstName() + " " + person.getLastName()+ " " + person.getSecondName() + " сейчас в кабинете № " + offices.get(i).getNumberOffice() );
             }
-
+            System.out.println("");
         }
     }
+
 }
