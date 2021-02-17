@@ -1,21 +1,22 @@
 package com.company.ZadachaOOP;
 
-public class Scaner implements Gadget, Scanning{
-    private String name ;
-    private int id;
+public class Scaner implements Gadget, Scanning {
+    private String name;
+    private String id;
 
-    public Scaner(int id, String name) {
+    public Scaner(String id, String name) {
         this.name = name;
         this.id = id;
     }
+
     @Override
     public void start() {
-        System.out.println("Gadget: "+ this.name + " start working...");
+        System.out.println("Gadget: " + this.name + " start working...");
     }
 
     @Override
     public void stop() {
-        System.out.println("Gadget: "+ this.name + " stop working.....");
+        System.out.println("Gadget: " + this.name + " stop working.....");
     }
 
 
@@ -30,7 +31,7 @@ public class Scaner implements Gadget, Scanning{
         return name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 }

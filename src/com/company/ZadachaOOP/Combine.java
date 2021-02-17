@@ -1,21 +1,22 @@
 package com.company.ZadachaOOP;
 
-public class Combine implements Gadget,Printing,Scanning,Copyring{
+public class Combine implements Gadget, Printing, Scanning, Copyring {
     private String name;
-    private int id;
+    private String id;
 
-    public Combine(int id, String name) {
+    public Combine(String id, String name) {
         this.name = name;
         this.id = id;
     }
+
     @Override
     public void start() {
-        System.out.println("Gadget: "+ this.name + " start working...");
+        System.out.println("Gadget: " + this.name + " start working...");
     }
 
     @Override
     public void stop() {
-        System.out.println("Gadget: "+ this.name + " stop working.....");
+        System.out.println("Gadget: " + this.name + " stop working.....");
     }
 
     @Override
@@ -42,7 +43,7 @@ public class Combine implements Gadget,Printing,Scanning,Copyring{
         return name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 }
