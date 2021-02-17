@@ -36,6 +36,7 @@ public class Exeptionss {
 
     public static int getFactorial(int num) throws FactorialException {
 
+        //assert (num <0);   // -ea
         if (num < 1) throw new FactorialException(num);
 
         int result = 1;
