@@ -25,7 +25,7 @@ public class ModifyngPrivateFields {
 
         f = pf.getClass().getDeclaredField("s");
         f.setAccessible(true);
-        f.set(pf, "MODIFY S");
+        f.set(pf, "MODIFY");
         System.out.println(pf);
 
 
