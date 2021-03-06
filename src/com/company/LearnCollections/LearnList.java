@@ -187,6 +187,11 @@ public class LearnList {
         System.out.println(v.equals(s));
 
         //List syncList = new Collections.synchronizedList(new ArrayList<>());
+        System.out.println("*************************************************");
+        List<Animal> animals = Arrays.asList(new Cat(), new Dog(), new Cat());
+        animals.forEach(animal -> animal.makeSound());
+        animals.forEach(animal -> System.out.println(animal.getName()));
+        System.out.println(animals.stream().count());
     }
 
     static class Student implements Comparable{
@@ -207,3 +212,47 @@ public class LearnList {
     }
 }
 
+class Animal{
+    String name= "animal";
+    void makeSound(){
+        System.out.println("Wow!");
+    };
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+class Cat extends Animal{
+    String name= "cat";
+    @Override
+    void makeSound(){
+        System.out.println("Mou!!");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+class Dog extends  Animal{
+    String name= "dog";
+    @Override
+    void makeSound(){
+        System.out.println("Gav!!");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
