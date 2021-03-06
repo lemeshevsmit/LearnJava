@@ -4,10 +4,10 @@ import java.util.*;
 
 public class LearnList {
 
-    static int deleteInLinkedList ( LinkedList<Student> ll, String str){
-        int count=0;
-        for (Student student: ll) {
-            if (student.name.equals(str))  return count;
+    static int deleteInLinkedList(LinkedList<Student> ll, String str) {
+        int count = 0;
+        for (Student student : ll) {
+            if (student.name.equals(str)) return count;
             count++;
         }
         return -1;
@@ -70,53 +70,53 @@ public class LearnList {
         // LinkedList  добавление в список поэлементно и целым списком
         LinkedList<Student> linkedList = new LinkedList<>();
 
-        linkedList.add(new Student(2,"Ivan"));
-        linkedList.addFirst(new Student(4,"Stepan"));
-        linkedList.offer(new Student(1,"Kiril"));
-        linkedList.addLast(new Student(3,"Oleg"));
-        linkedList.offerFirst(new Student(5,"Roman"));
+        linkedList.add(new Student(2, "Ivan"));
+        linkedList.addFirst(new Student(4, "Stepan"));
+        linkedList.offer(new Student(1, "Kiril"));
+        linkedList.addLast(new Student(3, "Oleg"));
+        linkedList.offerFirst(new Student(5, "Roman"));
 
         System.out.println("\n*************LinkedList************");
         System.out.println("My collection:");
         for (Student student : linkedList) {
-            System.out.println(student.id +" "+ student.name);
+            System.out.println(student.id + " " + student.name);
         }
         System.out.println("Sorted collection:");
         Collections.sort(linkedList);
         for (Student student : linkedList) {
-            System.out.println(student.id +" "+ student.name);
+            System.out.println(student.id + " " + student.name);
         }
 
-        System.out.println("Get [get(0)] item: "+linkedList.get(0).name);
-        System.out.println("Get [get(3)] item: "+linkedList.get(3).name);
-        System.out.println("Get [get(linkedList.size()-1)] item: "+linkedList.get(linkedList.size()-1).name);
-        System.out.println("Get [getFirst()] item: "+linkedList.getFirst().name);
-        System.out.println("Get [getLast()] item: "+linkedList.getLast().name);
-        System.out.println("Get [element()] item: "+linkedList.element().name);
-        System.out.println("Get [peek()] item: "+linkedList.peek().name);
-        System.out.println("Get [peekLast()] item: "+linkedList.peekLast().name);
-        System.out.println("Get [peekFirst()] item: "+linkedList.peekFirst().name);
+        System.out.println("Get [get(0)] item: " + linkedList.get(0).name);
+        System.out.println("Get [get(3)] item: " + linkedList.get(3).name);
+        System.out.println("Get [get(linkedList.size()-1)] item: " + linkedList.get(linkedList.size() - 1).name);
+        System.out.println("Get [getFirst()] item: " + linkedList.getFirst().name);
+        System.out.println("Get [getLast()] item: " + linkedList.getLast().name);
+        System.out.println("Get [element()] item: " + linkedList.element().name);
+        System.out.println("Get [peek()] item: " + linkedList.peek().name);
+        System.out.println("Get [peekLast()] item: " + linkedList.peekLast().name);
+        System.out.println("Get [peekFirst()] item: " + linkedList.peekFirst().name);
         System.out.println();
 
-        Student st = new Student(0,"Sveta");
-        linkedList.set(0,new Student(7,"Sasha"));
-        linkedList.set(2,st);
-        st.id=7;
-        st.name="Svetlana";
-        linkedList.set(linkedList.size()-1,st);
+        Student st = new Student(0, "Sveta");
+        linkedList.set(0, new Student(7, "Sasha"));
+        linkedList.set(2, st);
+        st.id = 7;
+        st.name = "Svetlana";
+        linkedList.set(linkedList.size() - 1, st);
         for (Student student : linkedList) {
-            System.out.println(student.id +" "+ student.name);
+            System.out.println(student.id + " " + student.name);
         }
 
-        System.out.println("Svetlana last in: "+linkedList.lastIndexOf(st));
-        System.out.println("Svetlana first in: "+linkedList.indexOf(st));
+        System.out.println("Svetlana last in: " + linkedList.lastIndexOf(st));
+        System.out.println("Svetlana first in: " + linkedList.indexOf(st));
 
         //System.out.println("Remove [deleteInLinkedList] item: "+linkedList.remove(deleteInLinkedList(linkedList,"Svetlana")).name);
-        System.out.println("Remove [removeLast()] item: "+linkedList.removeLast().name);
-        System.out.println("Remove [removeFirst()] item: "+linkedList.removeFirst().name);
-        System.out.println("Remove [poll()] item: "+linkedList.poll().name);
-        System.out.println("Remove [pollFirst()] item: "+linkedList.pollFirst().name);
-        System.out.println("Remove [remove(0)] item: "+linkedList.remove(0).name);
+        System.out.println("Remove [removeLast()] item: " + linkedList.removeLast().name);
+        System.out.println("Remove [removeFirst()] item: " + linkedList.removeFirst().name);
+        System.out.println("Remove [poll()] item: " + linkedList.poll().name);
+        System.out.println("Remove [pollFirst()] item: " + linkedList.pollFirst().name);
+        System.out.println("Remove [remove(0)] item: " + linkedList.remove(0).name);
         System.out.println("Size: " + linkedList.size());
 
         System.out.println("\n*************Stack************");
@@ -132,32 +132,32 @@ public class LearnList {
         stack.push("S");
         stack.add("M");
 
-        for (String s:stack){
-            System.out.print(s + "  " );
+        for (String s : stack) {
+            System.out.print(s + "  ");
         }
         System.out.println();
 
         Collections.sort(stack);
-        for (String s:stack){
-            System.out.print(s + "  " );
+        for (String s : stack) {
+            System.out.print(s + "  ");
         }
         System.out.println();
 
-        System.out.println("Peek: "+stack.peek());
-        System.out.println("Peek: "+stack.peek());
-        for (String s:stack){
-            System.out.print(s + "  " );
+        System.out.println("Peek: " + stack.peek());
+        System.out.println("Peek: " + stack.peek());
+        for (String s : stack) {
+            System.out.print(s + "  ");
         }
         System.out.println();
 
-        System.out.println("Pop: "+stack.pop());
-        System.out.println("Pop: "+stack.pop());
-        for (String s:stack){
-            System.out.print(s + "  " );
+        System.out.println("Pop: " + stack.pop());
+        System.out.println("Pop: " + stack.pop());
+        for (String s : stack) {
+            System.out.print(s + "  ");
         }
         System.out.println();
-        System.out.println("Index C: "+Collections.binarySearch(stack,"C"));
-        System.out.println("Index C: "+stack.indexOf("C"));
+        System.out.println("Index C: " + Collections.binarySearch(stack, "C"));
+        System.out.println("Index C: " + stack.indexOf("C"));
 
 
         System.out.println("\n*************Vector************");
@@ -171,15 +171,15 @@ public class LearnList {
         vector.add("F");
 
         String[] s = new String[vector.size()];
-        s= vector.toArray(s);
+        s = vector.toArray(s);
         for (int i = 0; i < s.length; i++) {
-            System.out.print (s[i] + "  ");
+            System.out.print(s[i] + "  ");
         }
         System.out.println();
         List<String> v = Arrays.asList(s);
         Collections.sort(v);
-        for(String sss: v){
-            System.out.print(sss+ "  ");
+        for (String sss : v) {
+            System.out.print(sss + "  ");
         }
         System.out.println();
         System.out.println(vector);
@@ -194,29 +194,45 @@ public class LearnList {
         System.out.println(animals.stream().count());
     }
 
-    static class Student implements Comparable{
-         int id;
-         String name;
+    static class Student implements Comparable {
+        int id;
+        String name;
 
-        public Student(int i,String n) {
+        public Student(int i, String n) {
             this.id = i;
-            this.name= n;
+            this.name = n;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Student student = (Student) o;
+            return id == student.id && Objects.equals(name, student.name);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(id, name);
         }
 
         @Override
         public int compareTo(Object o) {
-            return id - ((Student)o).id;
+            return id - ((Student) o).id;
         }
 
 
     }
 }
 
-class Animal{
-    String name= "animal";
-    void makeSound(){
+class Animal {
+    String name = "animal";
+
+    void makeSound() {
         System.out.println("Wow!");
-    };
+    }
+
+    ;
 
     public String getName() {
         return name;
@@ -226,10 +242,12 @@ class Animal{
         this.name = name;
     }
 }
-class Cat extends Animal{
-    String name= "cat";
+
+class Cat extends Animal {
+    String name = "cat";
+
     @Override
-    void makeSound(){
+    void makeSound() {
         System.out.println("Mou!!");
     }
 
@@ -241,10 +259,12 @@ class Cat extends Animal{
         this.name = name;
     }
 }
-class Dog extends  Animal{
-    String name= "dog";
+
+class Dog extends Animal {
+    String name = "dog";
+
     @Override
-    void makeSound(){
+    void makeSound() {
         System.out.println("Gav!!");
     }
 
